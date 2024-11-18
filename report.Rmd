@@ -1,0 +1,42 @@
+---
+title: "Association between Mental Health & Work Report"
+author: "Yueran Cao"
+date: "`r Sys.Date()`"
+output: html_document
+params:
+  production: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, here-i-am, include = FALSE}
+library(here)
+here::i_am(
+  "report.Rmd"
+)
+```
+
+## Dataset Introduction
+
+The dataset explores the implications of remote work on employees' mental well-being, encompassing 5,000 records from diverse industries and regions. Key variables include age, gender, job role, work location (remote, hybrid, onsite), stress levels, access to mental health resources, and overall job satisfaction. 
+
+This comprehensive dataset offers a unique opportunity to analyze the relationship between remote work dynamics and various mental health indicators, providing insights into how different demographics experience stress and satisfaction in their work environments.
+
+## Tabular Analysis
+
+```{r, generate table, echo = FALSE}
+table_one <- readRDS(here::here("output/table_one.rds"))
+
+table_one
+```
+
+Those working in finance, remotely, with a work-life balance rating of 3, poor sleep quality, based in Europe, and working 40 hours or less, rank the highest in stress levels. But there is no statistically difference.
+
+## Graphic Analysis
+
+```{r, generate plot, echo = FALSE}
+figure_one <- readRDS(here::here("output/figure_one.rds"))
+print(figure_one)
+```
+
+The Finance industry has the highest percentage of people experiencing high stress levels, whereas Manufacturing and Consulting industries have the lowest.

@@ -3,6 +3,7 @@ title: "Association between Mental Health & Work Report"
 author: "Yueran Cao"
 date: "`r Sys.Date()`"
 output: html_document
+echo: FALSE
 params:
   production: TRUE
 editor_options: 
@@ -24,10 +25,9 @@ This comprehensive dataset offers a unique opportunity to analyze the relationsh
 
 ## Tabular Analysis
 
-```{r, generate table, echo = FALSE}
+```{r, generate table, echo = FALSE, results='asis'}
 table_one <- readRDS(here::here("output/table_one.rds"))
-
-table_one
+print(table_one)
 ```
 
 Those working in finance, remotely, with a work-life balance rating of 3, poor sleep quality, based in Europe, and working 40 hours or less, rank the highest in stress levels. But there is no statistically difference.

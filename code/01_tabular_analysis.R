@@ -1,14 +1,23 @@
 here::i_am("code/01_tabular_analysis.R")
 
 #load data
+install.packages("readr")
 library(readr)
 data <- read_csv("data/Impact_of_Remote_Work_on_Mental_Health.csv")
 
 #tabular analysis
+install.packages("pacman")
+pacman::p_load(dplyr, labelled)
 install.packages("glue")
-library(labelled)
-library(dplyr)
+library(glue)
+install.packages("gtsummary")
 library(gtsummary)
+install.packages("cardx")
+install.packages("broom")
+library(cardx)
+library(broom)
+
+
 data$Number_workhour_per_week <- ifelse(data$Hours_Worked_Per_Week <= 40, "<= 40", "> 40")
 var_label(data) <- list(
   Industry = "Industry",

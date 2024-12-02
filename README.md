@@ -34,7 +34,7 @@ To set up the project environment, follow these steps:
 1. **Ensure Required Packages are Installed**:
    - Install the required R packages:
      ```r
-     install.packages(c("here", "readr", "ggplot2", "dplyr", "gtsummary", "rmarkdown"))
+     library(c("here", "readr", "ggplot2", "dplyr", "gtsummary", "rmarkdown"))
      ```
 
 2. **Run the Makefile**:

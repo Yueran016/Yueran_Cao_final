@@ -26,10 +26,10 @@ You can generate the final report by running the Makefile, which will execute th
 ### Step-by-Step Instructions
 ## Setting Up the Project
 
-**To set up the project environment, follow these steps:**
-1. Clone the repository.
-2. Open an R session in the project directory.
-3. Run `renv::restore()` to install the required packages as specified in the `renv.lock` file.**
+1. **To set up the project environment, follow these steps:**   
+    -1)Clone the repository.
+    -2) Open an R session in the project directory.
+    -3)Run `renv::restore()` to install the required packages as specified in the `renv.lock` file.**
 
 1. **Ensure Required Packages are Installed**:
    - Install the required R packages:

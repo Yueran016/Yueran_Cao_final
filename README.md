@@ -51,3 +51,12 @@ You can generate the final report by running the Makefile, which will execute th
 3. **View the Final Report**:
    - After running the Makefile, open `report.html` to view the final report.
 
+# Final Project
+
+## Use the Docker Image
+
+```sh
+docker run --rm -v $(pwd):/project finalreport Rscript /project/code/03_render_report.R
+
+
+

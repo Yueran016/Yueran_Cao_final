@@ -3,5 +3,7 @@ here::i_am(
 )
 
 rmarkdown::render(
-  here::here("report.Rmd")
+  input = here::here("report.Rmd"),
+  output_format = "html_document",
+  output_file = here::here("report.html")
 )

@@ -18,13 +18,9 @@ clean:
 # Target for running the Docker container with mounted volume
 .PHONY: docker-run
 docker-run:
-# Create an empty directory in the project directory called 'mounted'
-	mkdir -p mounted
+    # Create an empty directory in the project directory called 'report'
+	mkdir -p report
     
-# Build and run the Docker container with the empty 'mounted' directory mounted to '/project' inside the container
-		docker run --rm \
-        -v "$(PWD)/mounted:/project" \
-        --workdir /project \
-        final_report \
-        Rscript /project/code/03_render_report.R
+# Run the Docker container with the 'report' directory mounted to '/home/rstudio/project/report' inside the container 
+	docker run --rm -v "$(PWD)/report:/home/rstudio/project/report" --workdir /home/rstudio/project yueran016/final_report:latest Rscript /home/rstudio/project/code/03_render_report.R
 

@@ -19,7 +19,7 @@ This repository contains the analysis for the project "Association between Menta
 - **`Makefile`**: Makefile for automating the generation of the report and outputs.
 - **`README.md`**: This file, describing the repository contents and instructions.
 
-## Generating the Final Report
+## Generating the Final Report-Make
 
 You can generate the final report by running the Makefile, which will execute the necessary scripts to create the required outputs and render the report.
 
@@ -40,16 +40,11 @@ You can generate the final report by running the Makefile, which will execute th
 2. **Run the Makefile**:
    - Navigate to the project directory in your terminal and run the Makefile:
      ```sh
-     make
+     make docker-run
      ```
 
-   This will execute the following steps:
-   - Run `code/01_tabular_analysis.R` to generate the summary table and save it as `output/table_one.rds`.
-   - Run `code/02_figure_generate.R` to create the figure and save it as `output/figure_one.rds`.
-   - Run `code/03_render_report.R` to render the R Markdown file and generate the final report `report.html`.
-
 3. **View the Final Report**:
-   - After running the Makefile, open `report.html` to view the final report.
+   - After running the Makefile, open `report/report.html` to view the final report.
 
 # Final Project --Docker
 

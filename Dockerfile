@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libfontconfig1-dev
 
+# Install rmarkdown 
+RUN R -e "install.packages('rmarkdown')"
+
 # Create a project directory
 WORKDIR /home/rstudio/project
 
@@ -19,13 +22,15 @@ COPY code/ code/
 COPY data/ data/
 COPY output/ output/
 COPY .Rprofile .Rprofile
+COPY Makefile Makefile
+COPY README.md README.md
 
 # Set up renv cache
 RUN mkdir renv/.cache
 ENV RENV_PATHS_CACHE=/home/rstudio/project/renv/.cache
 
 # Restore the R environment using renv 
-RUN R -e "renv::restore()"
+RUN R -e "install.packages('renv'); renv::restore()"
 
 
 # Set an environment variable

@@ -53,10 +53,13 @@ You can generate the final report by running the Makefile, which will execute th
 
 # Final Project
 
-## Use the Docker Image
-
+## Build the Docker Image
 ```sh
-docker run --rm -v $(pwd):/project finalreport Rscript /project/code/03_render_report.R
+docker build -t final_report
+```
+## Run the Docker Image
+```sh
+docker run --rm -v "$(pwd)":/project final_report Rscript /project/code/03_render_report.R
 
 
 

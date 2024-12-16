@@ -51,11 +51,11 @@ You can generate the final report by running the Makefile, which will execute th
 3. **View the Final Report**:
    - After running the Makefile, open `report.html` to view the final report.
 
-# Final Project
+# Final Project --Docker
 
 ## Build the Docker Image
 ```sh
-docker build -t final_report
+docker build -t final_report .
 ```
 ## Run the Docker Image
 ```sh
